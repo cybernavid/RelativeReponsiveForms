@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    x:Class="RelativeReponsiveForms.Views.FirstPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:su="clr-namespace:RelativeReponsiveForms.Utils">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Thickness x:Key="Margin1" Left="{x:Static su:ScreenUtil.HOR5}" Top="{x:Static su:ScreenUtil.VERT5}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+            <Thickness x:Key="Margin2" Left="{x:Static su:ScreenUtil.HOR10}" Top="{x:Static su:ScreenUtil.VERT10}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+            <Thickness x:Key="Margin3" Left="{x:Static su:ScreenUtil.HOR15}" Top="{x:Static su:ScreenUtil.VERT5}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+            <Thickness x:Key="Margin4" Left="{x:Static su:ScreenUtil.HOR20}" Top="{x:Static su:ScreenUtil.VERT5}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+            <Thickness x:Key="Margin5" Left="{x:Static su:ScreenUtil.HOR30}" Top="{x:Static su:ScreenUtil.VERT5}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+            <Thickness x:Key="Margin6" Left="{x:Static su:ScreenUtil.HOR50}" Top="{x:Static su:ScreenUtil.VERT5}" Right="{x:Static su:ScreenUtil.HOR1}" Bottom="0" />
+
+            <Style x:Key="Label1" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="Label2" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT5}" />
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT10}" />
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT15}" />
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT20}" />
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT40}" />
+                <RowDefinition Height="{x:Static su:ScreenUtil.VERT10}" />
+            </Grid.RowDefinitions>
+
+            <StackLayout BackgroundColor="Aqua" Grid.Row="0">
+                <Label FontSize="{DynamicResource FontSize1}" Margin="{DynamicResource Margin1}">5%</Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="Black" Grid.Row="1">
+                <Label FontSize="{DynamicResource FontSize2}" Style="{DynamicResource Label1}" Margin="{DynamicResource Margin2}">10%</Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="Blue" Grid.Row="2">
+                <Label FontSize="{DynamicResource FontSize3}" Style="{DynamicResource Label2}" Margin="{DynamicResource Margin3}">15%</Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="Fuchsia" Grid.Row="3">
+                <Label FontSize="{DynamicResource FontSize4}" Style="{DynamicResource Label2}" Margin="{DynamicResource Margin4}">20%</Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="Gray" Grid.Row="4">
+                <Label FontSize="{DynamicResource FontSize5}" Style="{DynamicResource Label2}" Margin="{DynamicResource Margin5}">40%</Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="Green" Grid.Row="5">
+                <Label FontSize="{DynamicResource FontSize6}" Style="{DynamicResource Label1}" Margin="{DynamicResource Margin6}">10%</Label>
+            </StackLayout>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>
